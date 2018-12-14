@@ -4,7 +4,7 @@
 
 This project create the transversal objects of the agile devops infrastructure on azure.
 
-![alt text](https://github.com/thomasfourest/az-agiledevops-transversal-resources.git/blob/master/agile.devops.transversal.jpg)
+![alt text](https://raw.githubusercontent.com/thomasfourest/az-agiledevops-transversal-resources/master/agile.devops.transversal.jpg)
 
 Those resources :
  * continuous integration resource group,
@@ -24,11 +24,11 @@ https://docs.microsoft.com/fr-fr/cli/azure/install-azure-cli?view=azure-cli-late
 ##### 3 - Log in Azure with your favorite terminal
 * launch the following command : `az login`
 
-![alt text](https://github.com/thomasfourest/az-agiledevops-transversal-resources.git/blob/master/az-log.png)
+![alt text](https://raw.githubusercontent.com/thomasfourest/az-agiledevops-transversal-resources/master/az-log.png)
 
 * manual login in azure with a connection to azure in a web browser and an azure client command prompt on windows
 
-![alt text](https://github.com/thomasfourest/az-agiledevops-transversal-resources.git/blob/master/az.web.login.png)
+![alt text](https://raw.githubusercontent.com/thomasfourest/az-agiledevops-transversal-resources/master/az.web.login.png)
 
 ##### 4 - Execute the terraform main script with the tenant information and the Azure resource groups
 `terraform init --var-file=tenant.tfvars --var-file=rg.tfvars`
