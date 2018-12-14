@@ -1,0 +1,3 @@
+tenant.tfvars
+terraform.tfstate
+.terraform/plugins/*

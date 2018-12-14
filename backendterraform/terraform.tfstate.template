@@ -1,0 +1,187 @@
+{
+    "version": 3,
+    "terraform_version": "0.11.7",
+    "serial": 1,
+    "lineage": "e46325e9-e775-7873-fcdf-fd4c550125ed",
+    "modules": [
+        {
+            "path": [
+                "root"
+            ],
+            "outputs": {},
+            "resources": {
+                "azurerm_resource_group.rg_cd": {
+                    "type": "azurerm_resource_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/CONTINUOUS-DELIVERY",
+                        "attributes": {
+                            "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/CONTINUOUS-DELIVERY",
+                            "location": "westeurope",
+                            "name": "CONTINUOUS-DELIVERY",
+                            "tags.%": "1",
+                            "tags.environment": "Plateform Agile DevOps"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_resource_group.rg_ci": {
+                    "type": "azurerm_resource_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/CONTINUOUS-INTEGRATION",
+                        "attributes": {
+                            "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/CONTINUOUS-INTEGRATION",
+                            "location": "westeurope",
+                            "name": "CONTINUOUS-INTEGRATION",
+                            "tags.%": "1",
+                            "tags.environment": "Plateform Agile DevOps"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_resource_group.rg_ct": {
+                    "type": "azurerm_resource_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/CONTINUOUS-TESTING",
+                        "attributes": {
+                            "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/CONTINUOUS-TESTING",
+                            "location": "westeurope",
+                            "name": "CONTINUOUS-TESTING",
+                            "tags.%": "1",
+                            "tags.environment": "Plateform Agile DevOps"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_resource_group.transversal": {
+                    "type": "azurerm_resource_group",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/AGILEDEVOPS-TRANSVERSAL",
+                        "attributes": {
+                            "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/AGILEDEVOPS-TRANSVERSAL",
+                            "location": "westeurope",
+                            "name": "AGILEDEVOPS-TRANSVERSAL",
+                            "tags.%": "1",
+                            "tags.environment": "Plateform Agile DevOps"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_storage_account.transversal_st_acc": {
+                    "type": "azurerm_storage_account",
+                    "depends_on": [
+                        "azurerm_resource_group.transversal"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/AGILEDEVOPS-TRANSVERSAL/providers/Microsoft.Storage/storageAccounts/stacctransversal",
+                        "attributes": {
+                            "access_tier": "",
+                            "account_encryption_source": "Microsoft.Storage",
+                            "account_kind": "Storage",
+                            "account_replication_type": "LRS",
+                            "account_tier": "Standard",
+                            "account_type": "Standard_LRS",
+                            "enable_blob_encryption": "true",
+                            "enable_file_encryption": "true",
+                            "enable_https_traffic_only": "false",
+                            "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/AGILEDEVOPS-TRANSVERSAL/providers/Microsoft.Storage/storageAccounts/stacctransversal",
+                            "identity.#": "0",
+                            "location": "westeurope",
+                            "name": "stacctransversal",
+                            "network_rules.#": "0",
+                            "primary_access_key": "l5+BEVmyPrimaryAccessKeyHVyA==",
+                            "primary_blob_connection_string": "DefaultEndpointsProtocol=https;BlobEndpoint=https://stacctransversal.blob.core.windows.net/;AccountName=stacctransversal;AccountKey=l5+BEVmyPrimaryAccessKeyHVyA==",
+                            "primary_blob_endpoint": "https://stacctransversal.blob.core.windows.net/",
+                            "primary_connection_string": "DefaultEndpointsProtocol=https;AccountName=stacctransversal;AccountKey=l5+BEVmyPrimaryAccessKeyHVyA==;EndpointSuffix=core.windows.net",
+                            "primary_file_endpoint": "https://stacctransversal.file.core.windows.net/",
+                            "primary_location": "westeurope",
+                            "primary_queue_endpoint": "https://stacctransversal.queue.core.windows.net/",
+                            "primary_table_endpoint": "https://stacctransversal.table.core.windows.net/",
+                            "resource_group_name": "AGILEDEVOPS-TRANSVERSAL",
+                            "secondary_access_key": "F/9BuYTx0DI/dt4XYkmySecondaryAccessKeypXlQ==",
+                            "secondary_connection_string": "DefaultEndpointsProtocol=https;AccountName=stacctransversal;AccountKey=F/9BuYTx0DI/dt4XYkmyPrimaryAccessKeypXlQ==;EndpointSuffix=core.windows.net",
+                            "secondary_location": "",
+                            "tags.%": "1",
+                            "tags.environment": "Plateform Agile DevOps"
+                        },
+                        "meta": {
+                            "schema_version": "2"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_storage_container.transversal_st_cont": {
+                    "type": "azurerm_storage_container",
+                    "depends_on": [
+                        "azurerm_resource_group.transversal",
+                        "azurerm_storage_account.transversal_st_acc"
+                    ],
+                    "primary": {
+                        "id": "https://stacctransversal.blob.core.windows.net/stcont-transversal",
+                        "attributes": {
+                            "container_access_type": "private",
+                            "id": "https://stacctransversal.blob.core.windows.net/stcont-transversal",
+                            "name": "stcont-transversal",
+                            "properties.%": "4",
+                            "properties.last_modified": "Fri, 14 Dec 2018 10:14:47 GMT",
+                            "properties.lease_duration": "",
+                            "properties.lease_state": "available",
+                            "properties.lease_status": "unlocked",
+                            "resource_group_name": "AGILEDEVOPS-TRANSVERSAL",
+                            "storage_account_name": "stacctransversal"
+                        },
+                        "meta": {
+                            "schema_version": "1"
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                },
+                "azurerm_virtual_network.transversal_network": {
+                    "type": "azurerm_virtual_network",
+                    "depends_on": [
+                        "azurerm_resource_group.transversal"
+                    ],
+                    "primary": {
+                        "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/AGILEDEVOPS-TRANSVERSAL/providers/Microsoft.Network/virtualNetworks/vnet-transversal",
+                        "attributes": {
+                            "address_space.#": "1",
+                            "address_space.0": "10.0.0.0/16",
+                            "dns_servers.#": "0",
+                            "id": "/subscriptions/90f1mySubscriptionId5bed/resourceGroups/AGILEDEVOPS-TRANSVERSAL/providers/Microsoft.Network/virtualNetworks/vnet-transversal",
+                            "location": "westeurope",
+                            "name": "vnet-transversal",
+                            "resource_group_name": "AGILEDEVOPS-TRANSVERSAL",
+                            "subnet.#": "0",
+                            "tags.%": "1",
+                            "tags.environment": "Plateform Agile DevOps"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.azurerm"
+                }
+            },
+            "depends_on": []
+        }
+    ]
+}
